@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package megasena;
+
+option php_namespace = "App\\Grpc\\Megasena";
+option php_metadata_namespace = "App\\Grpc\\GPBMetadata";
+option go_package = "megasena-server/proto";
+
+service MegasenaService {
+  rpc GerarAposta (ApostaRequest) returns (ApostaResponse);
+  rpc SimularSorteio (SimulacaoRequest) returns (SimulacaoResponse);
+}
+
+message ApostaRequest {
+  int32 quantidade_dezenas = 1;
+}
+
+message ApostaResponse {
+  repeated int32 numeros = 1;
+  string data_geracao = 2;
+}
+
+message SimulacaoRequest {
+  repeated int32 dezenas_alvo = 1;
+}
+
+message SimulacaoResponse {
+  int64 total_tentativas = 1;
+  double tempo_segundos = 2;
+  repeated int32 numeros = 3;
+}

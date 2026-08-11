@@ -30,3 +30,56 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+=======
+# ==========================================
+# Ambientes, Segredos e Configurações
+# ==========================================
+.env
+.env.backup
+.env.production
+.env.*.local
+*.pem
+*.key
+
+# ==========================================
+# PHP / Laravel
+# ==========================================
+/vendor/
+/node_modules/
+/public/storage
+/public/build
+/bootstrap/cache/*.php
+/storage/*.key
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# Go
+# ==========================================
+# Binários e executáveis compilados
+/main
+*.exe
+*.exe?
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Arquivos de vendor (se usar go mod vendor)
+/vendor_go/
+
+# ==========================================
+# IDEs e Editores
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
